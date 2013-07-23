@@ -1,4 +1,13 @@
-dotfiles
+Some config files
+
 ========
 
-config files...
+# tmux
+
+# i3wm
+
+# vim
+
+# xsession
+
+# bash
