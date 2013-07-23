@@ -1,0 +1,211 @@
+# REQUIRED
+# feh
+# urxvt(~/.Xdefaults)
+# aumix
+# xcompmgr
+# xfce4-power-manager
+# scrot
+# thunar
+
+set $mod Mod1
+set $WALLPP /home/rentian/Pictures/wallpapers/node.png
+exec xcompmgr &
+exec xfce4-power-manager & # xfce4-power-manager-settings
+exec --no-startup-id nm-applet
+exec gnome-settings-daemon > /dev/null 2>&1 & # gtk theme...
+
+#new window default border
+new_window 1pixel
+new_float 1pixel
+
+# Hiding vertical borders
+#hide_edge_borders <none|vertical|horizontal|both>
+#hide_edge_borders horizontal
+
+# font for window titles. ISO 10646 = Unicode
+font xft:Zpix 8
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvt
+
+#Back and Forth
+#workspace_auto_back_and_forth yes
+
+# kill focused window
+bindsym $mod+Q kill
+
+# start dmenu (a program launcher)
+bindsym $mod+d exec dmenu_run -b -fn 'xft:Terminus:pixelsize=8' -nb '#191919' -nf '#9ac0cd' -sb '#191919' -sf '#bf3f34' -p 'picklist >> '
+bindsym $mod+Shift+d exec gksu dmenu_run
+
+
+#CHANGING BORDER STYLE
+bindsym $mod+t border normal
+bindsym $mod+y border 1pixel
+bindsym $mod+u border none
+
+
+# BORDERLESS CONTAINER
+#i3-msg border none 
+
+# WHICH WORKSPACE #
+#assign [class="Iceweasel"] 2
+
+# WINDOW CONTROL 
+for_window [class="*"] floating enable
+for_window [class="URxvt"] border normal  
+for_window [class="(?i)chrome"] border none 
+for_window [class="(?i)xfce"]  floating enable
+
+
+# HANDLE POPUPS
+#popup_during_fullscreen smart
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# split in horizontal orientation
+bindsym $mod+s split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+# change container layout (stacked, tabbed, default)
+# defalt container layout
+workspace_layout tabbed
+bindsym $mod+o layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout default
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+bindsym $mod+c focus child
+
+# switch to workspace
+# Assigns #
+#assign [class="(?i)URxvt"] 1: urxvt
+#assign [class="(?i)Chromium"] 2: web
+#assign [class="(?i)gVim"] 3: vim
+
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10: sample name
+
+# move focused container to workspace
+bindsym $mod+Shift+exclam move container to workspace 1
+bindsym $mod+Shift+at move container to workspace 2
+bindsym $mod+Shift+numbersign move container to workspace 3
+bindsym $mod+Shift+dollar move container to workspace 4
+bindsym $mod+Shift+percent move container to workspace 5
+bindsym $mod+Shift+asciicircum move container to workspace 6
+bindsym $mod+Shift+ampersand move container to workspace 7
+bindsym $mod+Shift+asterisk move container to workspace 8
+bindsym $mod+Shift+parenleft move container to workspace 9
+bindsym $mod+Shift+parenright move container to workspace 10
+
+bindsym $mod+n workspace next
+bindsym $mod+p workspace prev
+
+# reload the configuration file
+bindsym $mod+Shift+C reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+R restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+E exit
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+  bindsym h resize shrink left 10 px or 10 ppt 
+  bindsym Shift+H resize grow left 10 px or 10 ppt 
+  bindsym j resize shrink down 10 px or 10 ppt 
+  bindsym Shift+J resize grow down 10 px or 10 ppt 
+  bindsym k resize shrink up 10 px or 10 ppt 
+  bindsym Shift+K resize grow up 10 px or 10 ppt 
+  bindsym l resize shrink right 10 px or 10 ppt 
+  bindsym Shift+L resize grow right 10 px or 10 ppt
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# take screenshot
+# bindsym Print exec scrot '%Y-%m-%d-%t_$wx$h.png' -e 'mv $ $f ~/Pictures/'
+bindsym Print exec scrot -e 'mv $f ~/Pictures/screenshot'
+bindsym $MOD+Print exec scrot -s -e 'mv $f ~/Pictures/screenshot && feh ~/Pictures/screenshot/$f'
+
+
+# colors
+client.focused                  #4c7899 #225272 #ffffff
+client.unfocused                #426666 #2f4f4f #999999
+client.focused_inactive         #426666 #2f4f4f #999999
+client.urgent                   #383a3b #383a3b #ee0000
+
+
+###  ADDED KEY BINDINGS  ###
+#bindsym CTRL+$MOD+l exec i3lock -i $WALLPP -n
+bindsym CTRL+$MOD+l exec gnome-screensaver-command -l
+
+# VOLUME ADJUSTMENT
+bindsym CTRL+Up exec amixer set Master 5.0%+ unmute
+bindsym CTRL+Down exec amixer set Master 5.0%-
+bindsym CTRL+SHIFT+Down exec amixer set Master 0.1% 
+#bindsym XF86AudioMute exec amixer -q set Master toggle
+
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+#exec i3status | i3-wsbar -c "dzen2 -x %x -dock"
+#exec i3status | dzen2 -bg black -fg white -fn -misc-fixed-medium-*-*--12-*-*-*-*-*-*-* -p -w1000 -h 16 -x 920 -y 1064 -ta r &
+bar {
+  status_command i3status
+  position top
+  mode dock
+  tray_output primary
+
+  colors {
+    background #2c2e2f
+    statusline #ffffff
+    separator #666666
+
+    focused_workspace  #4c7899 #285577 #ffffff
+    active_workspace   #333333 #5f676a #ffffff
+    inactive_workspace #333333 #222222 #888888
+    urgent_workspace   #2f343a #900000 #ffffff
+  }
+ 
+}
+# AUTOSTART
+exec feh --bg-scale $WALLPP
