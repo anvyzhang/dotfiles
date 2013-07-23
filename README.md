@@ -1,13 +1,11 @@
-Some config files
+# my config files
 
-========
+## tmux
 
-# tmux
+## i3wm
 
-# i3wm
+## vim
 
-# vim
+## xsession
 
-# xsession
-
-# bash
+## bash
