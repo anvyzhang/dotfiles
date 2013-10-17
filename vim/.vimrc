@@ -1,3 +1,5 @@
+" ctrlp
+
 if has("syntax")
   syntax on
 endif
