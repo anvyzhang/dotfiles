@@ -19,7 +19,6 @@ let mapleader=","
 nmap <leader>ne :NERDTree<cr>
 nmap <leader>nc :NERDTreeClose<cr>
  
-source /usr/share/vim/vim73/macros/matchit.vim
 filetype plugin on
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
