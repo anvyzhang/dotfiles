@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/etc/nginx'
-let g:netrw_dirhist_2='/home/rentian/apps/i3-dzen2-bridge'
-let g:netrw_dirhist_3='/home/rentian/proj/umeng-op'
-let g:netrw_dirhist_4='/home/rentian/.vim'
-let g:netrw_dirhist_5='/home/rentian/proj/umeng-op'
