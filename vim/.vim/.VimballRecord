@@ -1,0 +1,1 @@
+tagbar.vmb: call delete('/home/rentian/.vim/README.md')|call delete('/home/rentian/.vim/autoload/tagbar.vim')|call delete('/home/rentian/.vim/doc/tagbar.txt')|call delete('/home/rentian/.vim/plugin/tagbar.vim')|call delete('/home/rentian/.vim/syntax/tagbar.vim')
