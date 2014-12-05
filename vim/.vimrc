@@ -23,7 +23,6 @@ filetype off
 syntax on
 set ai
 set nu
-set hls
 set nocompatible
 set tabstop=2
 set shiftwidth=2
@@ -36,14 +35,11 @@ set fileencoding=utf-8
 set fileencodings=utf-8,ucs-bom,chinese
 set list listchars=tab:→\ ,trail:·
 set autoread
-set ignorecase
 set shortmess=at
-set timeout
-set timeoutlen=1000
-set ttimeoutlen=50
+set timeout timeoutlen=1000 ttimeoutlen=50
+set hlsearch incsearch smartcase ignorecase
 
 " Preferences
-
 " Tree
 let mapleader=","
 nmap <silent> <leader>ne :NERDTree<CR>
@@ -69,14 +65,16 @@ endif
 
 " StatusLine
 let g:bufferline_echo = 0
+let g:airline_powerline_fonts = 1
 let g:airline_theme='bubblegum'
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
+let g:airline_symbols = {}
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
+let g:airline_symbols.linenr = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.space = ' '
 let g:airline_symbols.branch = '⎇'
 
 " File types
