@@ -13,6 +13,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'derekwyatt/vim-scala'
 call vundle#end()
 filetype plugin indent on
 filetype plugin on
@@ -38,6 +39,9 @@ set autoread
 set shortmess=at
 set timeout timeoutlen=1000 ttimeoutlen=50
 set hlsearch incsearch smartcase ignorecase
+set completeopt=longest,menuone
+set cot=menu
+set wildignore+=*.o,*.log,*.obj,.git,*.jpg,*.png,*.gif,*/vendor/bundle,*/vendor/cache
 
 " Preferences
 " Tree
