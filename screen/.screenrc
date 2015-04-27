@@ -1,0 +1,7 @@
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a "
+startup_message off
+termcapinfo xterm* ti@:te@
+bind  l next
+bind  h prev
