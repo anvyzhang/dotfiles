@@ -14,6 +14,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'fatih/vim-go'
 call vundle#end()
 filetype plugin indent on
 filetype plugin on
@@ -93,5 +94,5 @@ autocmd BufNewFile,BufRead *.god set filetype=ruby
 autocmd BufNewFile,BufRead *.json set filetype=javascript
 autocmd BufNewFile,BufRead *.mkd set ai formatoptions=tcroqn2 comments=n:>
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
-autocmd FileType go,c,java,sh set ts=4 sw=4 sts=4 et
+autocmd FileType c,java,sh set ts=4 sw=4 sts=4 et
+autocmd FileType go set ts=8 sw=8 sts=8
