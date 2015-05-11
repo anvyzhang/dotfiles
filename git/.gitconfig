@@ -1,0 +1,36 @@
+[user]
+  name = anvyzhang
+  email = anvyzhang@gmail.com
+[push]
+  default = tracking
+[pull]
+  default = tracking
+[core]
+  excludesfile = /Users/anvy/.gitignore
+[alias]
+  s = status
+  co = checkout
+  ci = commit
+  stat = status
+  st = status
+  br = branch
+  l = log
+  d = diff
+  dd = diff --cache
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red
+  new = cyan
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
