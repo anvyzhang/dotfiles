@@ -54,16 +54,16 @@ map <silent> <F1> :NERDTreeToggle<CR>
 let NERDTreeWinPos="right"
 
 " Tags & Search
-map <silent> <F2> : !ctags -R .<CR>
+map <silent> <F2> : !ctags -R --exclude=public --exclude=vendor .<CR>
 nmap <F8> :TagbarToggle<CR>
 let g:tagbar_left=1
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  'vendor/bundle/*\|vendor/cache/*\|public\|spec',
+  \ 'dir':  'vendor/bundle/*\|vendor/cache/*\|spec',
   \ 'file': '\v\.(exe|so|dll|swp|log|jpg|png|json)$',
   \ }
 if executable("ack")
     nnoremap <leader>a :Ack 
-    let g:ackprg="ack -H --smart-case --nocolor --nogroup --column --nojs
+    let g:ackprg="ack -H --smart-case --nocolor --nogroup --column
           \ --nocss --ignore-dir=vendor --ignore-dir=log --ignore-dir=tmp
           \ --ignore-file=is:Session.vim --ignore-file=is:tags"
     let g:ackhighlight=1
@@ -82,6 +82,7 @@ let g:airline_symbols.linenr = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.space = ' '
 let g:airline_symbols.branch = '⎇'
+let g:airline_nerd_origin_stat = 1
 
 " File types
 autocmd BufNewFile,BufRead Thorfile set filetype=ruby
@@ -94,5 +95,5 @@ autocmd BufNewFile,BufRead *.god set filetype=ruby
 autocmd BufNewFile,BufRead *.json set filetype=javascript
 autocmd BufNewFile,BufRead *.mkd set ai formatoptions=tcroqn2 comments=n:>
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
-autocmd FileType c,java,sh set ts=4 sw=4 sts=4 et
+autocmd FileType c,java,sh,javascript set ts=4 sw=4 sts=4 et
 autocmd FileType go set ts=8 sw=8 sts=8
