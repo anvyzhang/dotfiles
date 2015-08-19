@@ -44,6 +44,10 @@ set completeopt=longest,menuone
 set cot=menu
 set wildignore+=*.o,*.log,*.obj,.git,*.jpg,*.png,*.gif,*/vendor/bundle,*/vendor/cache
 cmap w!! w !sudo tee % > /dev/null
+set title
+set t_ts=k
+set t_fs=\
+set titlestring+=vim-%{split(getcwd(),'\/')[-1]}
 
 " Preferences
 " Tree
