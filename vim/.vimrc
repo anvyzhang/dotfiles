@@ -47,7 +47,7 @@ cmap w!! w !sudo tee % > /dev/null
 set title
 set t_ts=k
 set t_fs=\
-set titlestring+=vim-%{split(getcwd(),'\/')[-1]}
+set titlestring=vim-%{split(getcwd(),'\/')[-1]}
 
 " Preferences
 " Tree
