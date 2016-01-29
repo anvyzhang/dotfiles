@@ -35,7 +35,7 @@ set noshowmode
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,ucs-bom,chinese
-set list listchars=tab:→\ ,trail:·
+"set list listchars=tab:→\ ,trail:·
 set autoread
 set shortmess=at
 set timeout timeoutlen=1000 ttimeoutlen=50
