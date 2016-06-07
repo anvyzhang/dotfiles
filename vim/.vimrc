@@ -16,6 +16,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'fatih/vim-go'
 Plugin 'vim-scripts/DrawIt'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 filetype plugin indent on
