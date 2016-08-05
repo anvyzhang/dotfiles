@@ -17,6 +17,7 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'fatih/vim-go'
 Plugin 'vim-scripts/DrawIt'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'gre/play2vim'
 
 call vundle#end()
 filetype plugin indent on
