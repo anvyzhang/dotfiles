@@ -62,7 +62,7 @@ map <silent> <F1> :NERDTreeToggle<CR>
 let NERDTreeWinPos="right"
 
 " Tags & Search
-map <silent> <F2> : !ctags -R --exclude=public --exclude=vendor .<CR>
+map <silent> <F2> : !ctags -R --exclude=target --exclude=public --exclude=vendor .<CR>
 nmap <F8> :TagbarToggle<CR>
 let g:tagbar_left=1
 let g:ctrlp_custom_ignore = {
