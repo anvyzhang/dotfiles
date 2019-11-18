@@ -90,6 +90,7 @@ let g:airline_symbols.linenr = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.space = ' '
 let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.maxlinenr= ''
 
 " File types
 autocmd BufNewFile,BufRead Thorfile set filetype=ruby
