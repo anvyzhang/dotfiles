@@ -9,7 +9,7 @@
   excludesfile = /Users/anvy/.gitignore
   autocrlf = false
   safecrlf = warn
-	quotepath = false
+  quotepath = false
 [alias]
   s = status
   co = checkout
