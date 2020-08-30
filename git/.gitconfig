@@ -7,6 +7,9 @@
   default = tracking
 [core]
   excludesfile = /Users/anvy/.gitignore
+  autocrlf = false
+  safecrlf = warn
+	quotepath = false
 [alias]
   s = status
   co = checkout
@@ -34,3 +37,9 @@
   added = yellow
   changed = green
   untracked = cyan
+[gui]
+	encoding = utf-8
+[i18n "commit"]
+	encoding = utf-8
+[i18n]
+	logoutputencoding = utf-8
