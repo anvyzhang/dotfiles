@@ -2,9 +2,10 @@
 autocrlf = false
 safecrlf = warn
 quotepath = false
-excludesfile = /Users/anvy/.gitignore
+filemode = false
+#excludesfile = /Users/anvy/.gitignore
 [user]
-email = anvyzhang@gmail.com
+email = anvyzhang@gmail.com 
 name = anvyzhang
 [push]
 default = tracking
@@ -43,3 +44,8 @@ encoding = utf-8
 encoding = utf-8
 [i18n]
 logoutputencoding = utf-8
+[difftool "sourcetree"]
+cmd = '' \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+cmd = "'' "
+trustExitCode = true
